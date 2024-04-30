@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 // Connect to MongoDB Atlas
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DBPASSWORD}@users.saxeg6g.mongodb.net/?retryWrites=true&w=majority&appName=users`,
+    `mongodb+srv://bitmo24:${process.env.DBPASSWORD}@users.saxeg6g.mongodb.net/?retryWrites=true&w=majority&appName=users`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
