@@ -11,10 +11,11 @@ const userData = {
 };
 
 // Send POST request to save user data
-axios.post('https://face-authenticator-fptw.onrender.com/api/users', userData)
-  .then(response => {
-    console.log('User data saved successfully:', response.data);
-  })
-  .catch(error => {
-    console.error('Error saving user data:', error);
-  });
+// axios.post('https://face-authenticator-fptw.onrender.com/api/users', userData)
+//   .then(response => {
+//     console.log('User data saved successfully:', response.data);
+//   })
+//   .catch(error => {
+//     console.error('Error saving user data:', error);
+//   });
+axios.get('https://face-authenticator-fptw.onrender.com/api/users').then(response=>response.data);
