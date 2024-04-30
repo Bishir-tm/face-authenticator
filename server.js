@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+app.use(express.json());
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -34,6 +35,7 @@ const User = mongoose.model('User', userSchema);
 // Endpoint to save user data
 app.post('/api/users', async (req, res) => {
   try {
+    console.log(req);
     const { name, landmarks } = req.body;
     const user = new User({ name, landmarks });
     await user.save();
